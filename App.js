@@ -1,18 +1,11 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, Text} from 'react-native';
-import Fontisto from 'react-native-vector-icons/Fontisto';
+import StackNavigator from './navigation/StackNavigation';
 function App() {
-  // const isDarkMode = useColorScheme() === 'dark';
-
-  // const backgroundStyle = {
-  //   backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  // };
+ 
 
   return (
-    <SafeAreaView>
-      <Text>abc</Text>
-      <Fontisto name="email" size={30} color="#900" />
-    </SafeAreaView>
+      <StackNavigator />
   );
 }
 

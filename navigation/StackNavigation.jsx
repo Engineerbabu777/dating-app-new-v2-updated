@@ -19,7 +19,7 @@ import LocationScreen from '../screens/LocationScreen'
 import GenderScreen from '../screens/GenderScreen'
 import TypeScreen from '../screens/TypeScreen'
 import DatingType from '../screens/DatingType'
-import AnimationScreen from '../screens/AnimationScreen'
+// import AnimationScreen from '../screens/AnimationScreen'
 import LookingFor from '../screens/LookingFor'
 import HomeTownScreen from '../screens/HomeTownScreen'
 import PhotoScreen from '../screens/PhotoScreen'
@@ -42,24 +42,24 @@ const StackNavigator = () => {
   const Tab = createBottomTabNavigator()
   // const { isLoading, token } = useContext(AuthContext)
   // Ensure token is properly initialized
-  console.log('token:', token)
+  // console.log('token:', token)
 
-  if (isLoading) {
-    return (
-      <View
-        style={{
-          flex: 1,
-          justifyContent: 'center',
-          alignItems: 'center'
-        }}
-      >
-        <ActivityIndicator size={'large'} />{' '}
-      </View>
-    )
-  }
+  // if (isLoading) {
+  //   return (
+  //     <View
+  //       style={{
+  //         flex: 1,
+  //         justifyContent: 'center',
+  //         alignItems: 'center'
+  //       }}
+  //     >
+  //       <ActivityIndicator size={'large'} />{' '}
+  //     </View>
+  //   )
+  // }
 
   // Check if token is null or empty
-  console.log('Is token null or empty?', token === null || token === '')
+  // console.log('Is token null or empty?', token === null || token === '')
 
   function BottomTabs () {
     return (
