@@ -44,7 +44,7 @@ const LocationScreen = () => {
         setRegion({...region, latitude, longitude});
         // Use reverse geocoding to get the location name from latitude and longitude
         fetch(
-          `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${process.env.KEY}`,
+          `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=AIzaSyDJqEKwV49K0ycxK_os6f9ZgKuv6pJHINA`,
         )
           .then(response => response.json())
           .then(data => {
@@ -68,7 +68,7 @@ const LocationScreen = () => {
         setRegion({...region, latitude, longitude});
         // Update the location text
         fetch(
-          `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${process.env.KEY}`,
+          `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=AIzaSyDJqEKwV49K0ycxK_os6f9ZgKuv6pJHINA`,
         )
           .then(response => response.json())
           .then(data => {
@@ -85,7 +85,7 @@ const LocationScreen = () => {
   const handleMarkerDragEnd = coordinate => {
     // Use reverse geocoding to get the location name from latitude and longitude
     fetch(
-      `https://maps.googleapis.com/maps/api/geocode/json?latlng=${coordinate.latitude},${coordinate.longitude}&key=${process.env.KEY}`,
+      `https://maps.googleapis.com/maps/api/geocode/json?latlng=${coordinate.latitude},${coordinate.longitude}&key=AIzaSyDJqEKwV49K0ycxK_os6f9ZgKuv6pJHINA`,
     )
       .then(response => response.json())
       .then(data => {

@@ -12,29 +12,29 @@ import React, {useState, useEffect} from 'react';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {useNavigation} from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-// import {
-//   getRegistrationProgress,
-//   saveRegistrationProgress,
-// } from '../registrationUtils';
+import {
+  getRegistrationProgress,
+  saveRegistrationProgress,
+} from '../registrationUtils';
 
 const NameScreen = () => {
   const [firstName, setFirstName] = useState('');
   const navigation = useNavigation();
   useEffect(() => {
-    // getRegistrationProgress('Name').then(progressData => {
-    //   if (progressData) {
-    //     setFirstName(progressData.firstName || '');
-    //   }
-    // });
+    getRegistrationProgress('Name').then(progressData => {
+      if (progressData) {
+        setFirstName(progressData.firstName || '');
+      }
+    });
   }, []);
 
   const handleNext = () => {
-    // if (firstName.trim() !== '') {
-    //   // Save the current progress data including the name
-    //   saveRegistrationProgress('Name', { firstName });
-    // }
-    // // Navigate to the next screen
-    // navigation.navigate('Email');
+    if (firstName.trim() !== '') {
+      // Save the current progress data including the name
+      saveRegistrationProgress('Name', { firstName });
+    }
+    // Navigate to the next screen
+    navigation.navigate('Email');
   };
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: 'white'}}>

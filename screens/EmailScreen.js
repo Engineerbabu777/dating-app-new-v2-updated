@@ -18,21 +18,21 @@ const EmailScreen = () => {
   const [email, setEmail] = useState('');
   const navigation = useNavigation();
   useEffect(() => {
-    // getRegistrationProgress('Email').then((progressData) => {
-    //   if (progressData) {
-    //     setEmail(progressData.email || '');
-    //   }
-    // });
+    getRegistrationProgress('Email').then((progressData) => {
+      if (progressData) {
+        setEmail(progressData.email || '');
+      }
+    });
   }, []);
 
   const handleNext = () => {
-    // if (email.trim() !== '') {
-    //     console.log("name",email)
-    //   // Save the current progress data including the name
-    //   saveRegistrationProgress('Email', { email });
-    // }
-    // // Navigate to the next screen
-    // navigation.navigate('Password');
+    if (email.trim() !== '') {
+        console.log("name",email)
+      // Save the current progress data including the name
+      saveRegistrationProgress('Email', { email });
+    }
+    // Navigate to the next screen
+    navigation.navigate('Password');
   };
   return (
     <SafeAreaView  style={{flex: 1, backgroundColor: 'white'}}>
